@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <div class="m-auto" style="width:400px;">
+    <div class="container"><br><br>
+      <div class="jumbotron" style="width: 400px;">
+    <h4>CREATE ACCOUNT</h4>
+      <form action="/action_page.php">
+        <div class="row">
+        <div class="form-group col-sm-12 ">
+                <label for="uname">Firstname</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                <label for="uname">Lastname</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-12">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-sm-12">
+    <label for="pwd">Mobile Number</label>
+    <input type="tel" class="form-control" id="phonenum" placeholder="Enter Mobile Number" pattern="^\d{10}$" required>
+    </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-sm-12">
+          <label for="pwd">Password</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+        </div>
+    </div>
+    
+      <div>
+        <button type="submit" class="btn btn-primary mr-3">REGISTER</button>
+        <label>Already have an account?</label>
+        <a href="/login" >LOGIN</a>
+    </div>
+    </form>
+    </div></div>
+            </div>
+    </body>
+    </html>
+    
