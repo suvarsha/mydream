@@ -1,1 +1,56 @@
-<p>ipos works!</p>
+<div class="row"> 
+    
+    <div class="col-sm-6">
+    
+    </div> 
+  
+    <div class="col-sm-6" > 
+       
+      <div [hidden]="submitted" style="width: 400px;">  
+        <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="iposaveform">  
+          <div class="form-group">  
+            <h3>IPOS</h3>  
+            <label for="name">ID</label>  
+            <input type="text" class="form-control"  formControlName="ipos_id" data-toggle="tooltip"   
+               data-placement="right" title="Enter  Id" >  
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('ipos_id').touched) && (iposaveform.get('ipos_id').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="iposaveform.get('ipos_id').errors.required"> Ipos is Required</span>  
+                  <span *ngIf = "iposaveform.get('ipos_id').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div>
+        <div class="form-group">   
+            <label for="name">COMPANYNAME</label>  
+            <input type="text" class="form-control"  formControlName="company_Name" data-toggle="tooltip"   
+               data-placement="right" title="Enter  companyName" >  
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('company_Name').touched) && (iposaveform.get('company_Name').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="iposaveform.get('company_Name').errors.required"> company name is Required</span>  
+                  <span *ngIf = "iposaveform.get('company_Name').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div>
+        <div class="form-group">   
+            <label for="name">STOCKEXCHANGE</label>  
+            <input type="text" class="form-control"  formControlName="stock_Exchange" data-toggle="tooltip"   
+               data-placement="right" title="Enter  stockexchange" >  
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('stock_Exchange').touched) && (iposaveform.get('stock_Exchange').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="iposaveform.get('stock_Exchange').errors.required"> stock exchange is Required</span>  
+                  <span *ngIf = "iposaveform.get('stock_Exchange').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div> 
+
+
+
+
+
+        </form>
+        </div>
+        </div>
+        </div>

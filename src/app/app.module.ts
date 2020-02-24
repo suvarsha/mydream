@@ -99,6 +99,12 @@ import { IposComponent } from './ipos/ipos.component';
         path:'company-list',
         component:CompanyListComponent
       }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'ipos',
+        component:IposComponent
+      }
     ])
   ],
   providers: [],
