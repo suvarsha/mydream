@@ -11,6 +11,12 @@ import { ImportComponent } from './import/import.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserListComponent } from './user-list/user-list.component';
+import { ManagecompanyComponent } from './managecompany/managecompany.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { IposComponent } from './ipos/ipos.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +28,18 @@ import { SignupComponent } from './signup/signup.component';
     ImportComponent,
     LoginComponent,
     LogoutComponent,
-    SignupComponent
+    SignupComponent,
+    UserListComponent,
+    ManagecompanyComponent,
+    CompanyListComponent,
+    IposComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path:'login',
@@ -67,6 +80,24 @@ import { SignupComponent } from './signup/signup.component';
       {
         path:'import',
         component:ImportComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'user-List',
+        component:UserListComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'managecompany',
+        component:ManagecompanyComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'company-list',
+        component:CompanyListComponent
       }
     ])
   ],

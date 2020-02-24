@@ -1,11 +1,11 @@
 
-
-
-body{
+.row{
     background-image: url("../images/img1.jpg");
-    background-size: cover ;
-    height: 600px;
-    width:1400px
+    background-size: cover;
+    height: 1000px;
+    width:1400px;
+    
 }
+
 
 

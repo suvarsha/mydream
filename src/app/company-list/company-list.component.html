@@ -1,0 +1,29 @@
+<table  class="table table-hover table-sm" >
+   
+    <thead class="thead-light">  
+        <tr>  
+            <th>COMPANYNAME</th>  
+            <th>CEO</th>  
+            <th>TURNOVER</th>  
+            <th>BOARD OF DIRECTORIES</th>  
+            <th>STOCK CODE</th>
+            <th>BRIEF</th>
+            <th>LIST OF STOCK EXCHANGE</th>
+            <th>SECTOR</th>
+              
+        </tr>  
+    </thead>  
+    <tbody>  
+         <tr *ngFor="let  company of companyList ">  
+            <td>{{company.companyName}}</td>  
+            <td>{{company.ceo}}</td>  
+            <td>{{company.turnOver}}</td>  
+            <td>{{company.boardOfDirectories}}</td>
+            <td>{{company.stockCode}}</td>
+            <td>{{company.brief}}</td>
+            
+            <td>{{company.listOfStockExchange}}</td>
+            <td>{{company.sector}}</td>
+            </tr>
+        </tbody>
+        </table>
