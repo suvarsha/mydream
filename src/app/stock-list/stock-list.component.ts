@@ -15,6 +15,7 @@ export class StockListComponent implements OnInit {
     this.exchangeservice.getAllstockExchange().subscribe(data =>{  
       this.stockList =data
   });
+  
 
 }
 }

@@ -18,11 +18,14 @@ export class ManagecompanyService {
   savestock(stock:Managecompany):Observable<Managecompany>{
     return this.http.post<Managecompany>(this.baseUrl+'/savecompanydata',stock)
   }
-  updatestock(stockCode:String):Observable<object>{
-    return this.http.put(this.baseUrl+'/putcompanydata/${stockCode}',stockCode);
+  updatestock(stockcode:String):Observable<object>{
+    return this.http.put(this.baseUrl+'/putcompanydata/stockcode}',stockcode);
   }
-  deletestock(stockCode:String):boolean{
-   this.http.delete(this.baseUrl+'deletecompanycode/${stockCode}',{responseType:'json'});
-   return true;
+  deleteStock(stockcode:String):Observable<object>{
+   return this.http.delete(this.baseUrl+'/deletecompanycode/'+stockcode);
   }
+  findOneInAll(stockcode:String):Observable<any>{
+return this.http.get(this.baseUrl+'/findcompanycode/'+stockcode);
+  }
+  
 }

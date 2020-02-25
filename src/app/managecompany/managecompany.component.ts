@@ -14,6 +14,16 @@ export class ManagecompanyComponent implements OnInit {
   company : Managecompany=new Managecompany();
   submitted=false;
  ngOnInit() {
+
+  var stockcode=window.localStorage.getItem("edit-stockCode");
+  alert(stockcode);
+this.manageservice.findOneInAll(stockcode)
+    .subscribe(data => { this.company =data;
+      alert(this.company.stockCode)
+
+      this.companysaveform.setValue(this.company);
+
+     }) ;
   this.submitted=false;
   }
   companysaveform=new FormGroup({

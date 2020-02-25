@@ -24,6 +24,9 @@
             
             <td>{{company.listOfStockExchange}}</td>
             <td>{{company.sector}}</td>
+            <td><button (click)="deleteCompany(company)"   class="btn btn-danger">Delete</button> </td>
+            <td><button (click)="updateCompany(company)"   class="btn btn-success">Update</button> </td>
+         
             </tr>
         </tbody>
         </table>
