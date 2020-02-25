@@ -1,0 +1,21 @@
+
+<table  class="table table-hover table-sm" >
+   
+    <thead class="thead-light">  
+        <tr>  
+            <th>ID</th>  
+            <th>SECTORNAME</th> 
+            <th>BRIEF</th> 
+            
+              
+        </tr>  
+    </thead>  
+    <tbody>  
+         <tr *ngFor="let  sector of sectorList ">  
+            <td>{{sector.id}}</td>  
+            <td>{{sector.sectorName}}</td>  
+            <td>{{sector.brief}}</td>  
+            
+            </tr>
+        </tbody>
+        </table>

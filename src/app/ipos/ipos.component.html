@@ -7,7 +7,7 @@
     <div class="col-sm-6" > 
        
       <div [hidden]="submitted" style="width: 400px;">  
-        <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="iposaveform">  
+        <form #saveipos1 (ngSubmit)="saveipos(saveipos1)"  [formGroup]="iposaveform">  
           <div class="form-group">  
             <h3>IPOS</h3>  
             <label for="name">ID</label>  
@@ -44,8 +44,56 @@
                       MinLength Error   
                   </span>                     
               </div>  
-        </div> 
-
+        </div>
+        <div class="form-group">   
+          <label for="name">PRICEPERSHARE</label>  
+          <input type="text" class="form-control"  formControlName="price_per_share" data-toggle="tooltip"   
+             data-placement="right" title="Enter  price per share" >  
+          <div class="alert alert-danger" *ngIf = "(iposaveform.get('price_per_share').touched) && (iposaveform.get('price_per_share').invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="iposaveform.get('price_per_share').errors.required"> price is Required</span>  
+                <span *ngIf = "iposaveform.get('price_per_share').errors.minlength">   
+                    MinLength Error   
+                </span>                     
+            </div>  
+      </div> 
+      <div class="form-group">   
+        <label for="name">TOTAL NO OF SHARE</label>  
+        <input type="text" class="form-control"  formControlName="total_no_of_share" data-toggle="tooltip"   
+           data-placement="right" title="Enter  total no of share" >  
+        <div class="alert alert-danger" *ngIf = "(iposaveform.get('total_no_of_share').touched) && (iposaveform.get('total_no_of_share').invalid)"   
+          style="margin-top: 5px;">  
+            <span *ngIf="iposaveform.get('total_no_of_share').errors.required"> total is Required</span>  
+              <span *ngIf = "iposaveform.get('total_no_of_share').errors.minlength">   
+                  MinLength Error   
+              </span>                     
+          </div>  
+    </div> 
+    <div class="form-group">   
+      <label for="name">DATE</label>  
+      <input type="date" class="form-control"  formControlName="date" data-toggle="tooltip"   
+         data-placement="right" title="Enter  date" >  
+      <div class="alert alert-danger" *ngIf = "(iposaveform.get('date').touched) && (iposaveform.get('date').invalid)"   
+        style="margin-top: 5px;">  
+          <span *ngIf="iposaveform.get('date').errors.required"> date is Required</span>  
+            <span *ngIf = "iposaveform.get('date').errors.minlength">   
+                MinLength Error   
+            </span>                     
+        </div>  
+  </div>
+  <div class="form-group">   
+    <label for="name">REMARKS</label>  
+    <input type="text" class="form-control"  formControlName="remarks" data-toggle="tooltip"   
+       data-placement="right" title="Enter  remarks" >  
+    <div class="alert alert-danger" *ngIf = "(iposaveform.get('remarks').touched) && (iposaveform.get('remarks').invalid)"   
+      style="margin-top: 5px;">  
+        <span *ngIf="iposaveform.get('remarks').errors.required"> remarks is Required</span>  
+          <span *ngIf = "iposaveform.get('remarks').errors.minlength">   
+              MinLength Error   
+          </span>                     
+      </div>  
+</div> 
+<button type="submit"    class="btn btn-success">Submit</button>
 
 
 

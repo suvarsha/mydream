@@ -17,6 +17,11 @@ import { UserListComponent } from './user-list/user-list.component';
 import { ManagecompanyComponent } from './managecompany/managecompany.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { IposComponent } from './ipos/ipos.component';
+import { IpoListComponent } from './ipo-list/ipo-list.component';
+import { SectorComponent } from './sector/sector.component';
+import { SectorListComponent } from './sector-list/sector-list.component';
+import { StockexchangeComponent } from './stockexchange/stockexchange.component';
+import { StockListComponent } from './stock-list/stock-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { IposComponent } from './ipos/ipos.component';
     UserListComponent,
     ManagecompanyComponent,
     CompanyListComponent,
-    IposComponent
+    IposComponent,
+    IpoListComponent,
+    SectorComponent,
+    SectorListComponent,
+    StockexchangeComponent,
+    StockListComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +115,40 @@ import { IposComponent } from './ipos/ipos.component';
         path:'ipos',
         component:IposComponent
       }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'ipo-list',
+        component:IpoListComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'sector',
+        component:SectorComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'sector-list',
+        component:SectorListComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'stockexchange',
+        component:StockexchangeComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'stock-list',
+        component:StockListComponent
+      }
     ])
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,78 @@
+
+<div class="row"> 
+    
+    <div class="col-sm-6">
+    
+    </div> 
+  
+    <div class="col-sm-6" > 
+       
+      <div [hidden]="submitted" style="width: 400px;">  
+        <form #saveExchange1 (ngSubmit)="saveExchange(saveExchange1)"  [formGroup]="exchangeSaveForm">  
+          <div class="form-group">  
+            <h3>STOCK EXCHANGE</h3>  
+            <label for="name">ID</label>  
+            <input type="text" class="form-control"  formControlName="exchange_id" data-toggle="tooltip"   
+               data-placement="right" title="Enter stock id" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('exchange_id').touched) && (exchangeSaveForm.get('exchange_id').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="exchangeSaveForm.get('exchange_id').errors.required"> id is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('exchange_id').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div>
+        <div class="form-group">   
+            <label for="name">STOCKEXCHANGE</label>  
+            <input type="text" class="form-control"  formControlName="stock_ex" data-toggle="tooltip"   
+               data-placement="right" title="Enter stock id" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('stock_ex').touched) && (exchangeSaveForm.get('stock_ex').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="exchangeSaveForm.get('stock_ex').errors.required"> stock exchange is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('stock_ex').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div>
+        <div class="form-group">   
+            <label for="name">BRIEF</label>  
+            <input type="text" class="form-control"  formControlName="brief" data-toggle="tooltip"   
+               data-placement="right" title="Enter brief" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('brief').touched) && (exchangeSaveForm.get('brief').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="exchangeSaveForm.get('brief').errors.required"> brief is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('brief').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div> 
+        <div class="form-group">   
+            <label for="name">CONTACT ADDRESS</label>  
+            <input type="text" class="form-control"  formControlName="contact_Address" data-toggle="tooltip"   
+               data-placement="right" title="Enter contact" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('contact_Address').touched) && (exchangeSaveForm.get('contact_Address').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="exchangeSaveForm.get('contact_Address').errors.required"> contact address is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('contact_Address').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div> 
+        <div class="form-group">   
+            <label for="name">REMARKS</label>  
+            <input type="text" class="form-control"  formControlName="remarks" data-toggle="tooltip"   
+               data-placement="right" title="Enter remarks" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('remarks').touched) && (exchangeSaveForm.get('remarks').invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="exchangeSaveForm.get('remarks').errors.required"> remark is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('remarks').errors.minlength">   
+                      MinLength Error   
+                  </span>                     
+              </div>  
+        </div> 
+        
+        <button type="submit"    class="btn btn-success">Submit</button>  
+        </form>
+        </div>
+        </div>
+        </div>
