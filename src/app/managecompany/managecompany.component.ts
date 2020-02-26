@@ -61,7 +61,8 @@ save()
 
   this .company=new Managecompany();
   window.localStorage.removeItem("edit-stockCode");
-  this.router.navigate(['company-list']);
+  alert("updated successfully")
+  this.router.navigate(['home']);
   
   
 }

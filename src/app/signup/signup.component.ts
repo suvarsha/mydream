@@ -25,11 +25,7 @@ export class SignupComponent implements OnInit {
 this.message="update record";
       this.userservice.findOneInAll(id)
     .subscribe(data => { this.user =data;
-      
-
       this.usersaveform.setValue(this.user);
-
-
     });
     this.submitted=false;
   }
@@ -63,7 +59,8 @@ save()
   this.userservice.saveUser(this.user).subscribe(data=>console.log(data),error=>console.log(error));
   this .user=new User();
   window.localStorage.removeItem("edit-id");
-  this.router.navigate(['user-list']);
+  alert("updated successfully")
+  this.router.navigate(['home']);
 }
 usersaveForm(){
   this.submitted=false;
