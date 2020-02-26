@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   message:String="SIGNUP";
   submitted = false;  
   ngOnInit() {
-   var id= window.localStorage.getItem("edit-id");
+   var id= window.localStorage.getItem("edit-userid");
 
     if(id!==null&&id!="")
     {
@@ -58,7 +58,7 @@ save()
 {
   this.userservice.saveUser(this.user).subscribe(data=>console.log(data),error=>console.log(error));
   this .user=new User();
-  window.localStorage.removeItem("edit-id");
+  window.localStorage.removeItem("edit-userid");
   alert("updated successfully")
   this.router.navigate(['home']);
 }

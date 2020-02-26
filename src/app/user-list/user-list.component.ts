@@ -29,8 +29,8 @@ export class UserListComponent implements OnInit {
     });
   }
   updateUser(company:User){
-    window.localStorage.removeItem("edit-id");
-    window.localStorage.setItem("edit-id", company.id.toString());
+    window.localStorage.removeItem("edit-userid");
+    window.localStorage.setItem("edit-userid", company.id.toString());
 
     this.router.navigate(['signup']);
     

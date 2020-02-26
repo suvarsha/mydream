@@ -17,10 +17,13 @@ export class IposService {
     return this.http.post<Ipos>(this.baseUrl+'/saveipos',stock)
   }
   updateIpo(id:number):Observable<object>{
-    return this.http.put(this.baseUrl+'/putipos/{id}',id);
+    return this.http.put(this.baseUrl+'/putipos/id}',id);
   }
   deleteIpo(id:number):Observable<object>{
   return this.http.delete(this.baseUrl+'/deleteipos/'+id);
    
   }
+  findOneInAll(id:String):Observable<any>{
+    return this.http.get(this.baseUrl+'/findipos/'+id);
+      }
 }

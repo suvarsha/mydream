@@ -11,72 +11,72 @@
           <div class="form-group">  
             <h3>IPOS</h3>  
             <label for="name">ID</label>  
-            <input type="text" class="form-control"  formControlName="ipos_id" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter  Id" >  
-            <div class="alert alert-danger" *ngIf = "(iposaveform.get('ipos_id').touched) && (iposaveform.get('ipos_id').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('id').touched) && (iposaveform.get('id').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="iposaveform.get('ipos_id').errors.required"> Ipos is Required</span>  
-                  <span *ngIf = "iposaveform.get('ipos_id').errors.minlength">   
+                <span *ngIf="iposaveform.get('id').errors.required"> Ipos is Required</span>  
+                  <span *ngIf = "iposaveform.get('id').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
         </div>
         <div class="form-group">   
             <label for="name">COMPANYNAME</label>  
-            <input type="text" class="form-control"  formControlName="company_Name" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="companyName" data-toggle="tooltip"   
                data-placement="right" title="Enter  companyName" >  
-            <div class="alert alert-danger" *ngIf = "(iposaveform.get('company_Name').touched) && (iposaveform.get('company_Name').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('companyName').touched) && (iposaveform.get('companyName').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="iposaveform.get('company_Name').errors.required"> company name is Required</span>  
-                  <span *ngIf = "iposaveform.get('company_Name').errors.minlength">   
+                <span *ngIf="iposaveform.get('companyName').errors.required"> company name is Required</span>  
+                  <span *ngIf = "iposaveform.get('companyName').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
         </div>
         <div class="form-group">   
             <label for="name">STOCKEXCHANGE</label>  
-            <input type="text" class="form-control"  formControlName="stock_Exchange" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="stockExchange" data-toggle="tooltip"   
                data-placement="right" title="Enter  stockexchange" >  
-            <div class="alert alert-danger" *ngIf = "(iposaveform.get('stock_Exchange').touched) && (iposaveform.get('stock_Exchange').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(iposaveform.get('stockExchange').touched) && (iposaveform.get('stockExchange').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="iposaveform.get('stock_Exchange').errors.required"> stock exchange is Required</span>  
-                  <span *ngIf = "iposaveform.get('stock_Exchange').errors.minlength">   
+                <span *ngIf="iposaveform.get('stockExchange').errors.required"> stock exchange is Required</span>  
+                  <span *ngIf = "iposaveform.get('stockExchange').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
         </div>
         <div class="form-group">   
           <label for="name">PRICEPERSHARE</label>  
-          <input type="text" class="form-control"  formControlName="price_per_share" data-toggle="tooltip"   
+          <input type="text" class="form-control"  formControlName="pricePerShare" data-toggle="tooltip"   
              data-placement="right" title="Enter  price per share" >  
-          <div class="alert alert-danger" *ngIf = "(iposaveform.get('price_per_share').touched) && (iposaveform.get('price_per_share').invalid)"   
+          <div class="alert alert-danger" *ngIf = "(iposaveform.get('pricePerShare').touched) && (iposaveform.get('pricePerShare').invalid)"   
             style="margin-top: 5px;">  
-              <span *ngIf="iposaveform.get('price_per_share').errors.required"> price is Required</span>  
-                <span *ngIf = "iposaveform.get('price_per_share').errors.minlength">   
+              <span *ngIf="iposaveform.get('pricePerShare').errors.required"> price is Required</span>  
+                <span *ngIf = "iposaveform.get('pricePerShare').errors.minlength">   
                     MinLength Error   
                 </span>                     
             </div>  
       </div> 
       <div class="form-group">   
         <label for="name">TOTAL NO OF SHARE</label>  
-        <input type="text" class="form-control"  formControlName="total_no_of_share" data-toggle="tooltip"   
+        <input type="text" class="form-control"  formControlName="totalNoOfShare" data-toggle="tooltip"   
            data-placement="right" title="Enter  total no of share" >  
-        <div class="alert alert-danger" *ngIf = "(iposaveform.get('total_no_of_share').touched) && (iposaveform.get('total_no_of_share').invalid)"   
+        <div class="alert alert-danger" *ngIf = "(iposaveform.get('totalNoOfShare').touched) && (iposaveform.get('totalNoOfShare').invalid)"   
           style="margin-top: 5px;">  
-            <span *ngIf="iposaveform.get('total_no_of_share').errors.required"> total is Required</span>  
-              <span *ngIf = "iposaveform.get('total_no_of_share').errors.minlength">   
+            <span *ngIf="iposaveform.get('totalNoOfShare').errors.required"> total is Required</span>  
+              <span *ngIf = "iposaveform.get('totalNoOfShare').errors.minlength">   
                   MinLength Error   
               </span>                     
           </div>  
     </div> 
     <div class="form-group">   
       <label for="name">DATE</label>  
-      <input type="date" class="form-control"  formControlName="date" data-toggle="tooltip"   
+      <input type="date" class="form-control"  formControlName="openDateTime" data-toggle="tooltip"   
          data-placement="right" title="Enter  date" >  
-      <div class="alert alert-danger" *ngIf = "(iposaveform.get('date').touched) && (iposaveform.get('date').invalid)"   
+      <div class="alert alert-danger" *ngIf = "(iposaveform.get('openDateTime').touched) && (iposaveform.get('openDateTime').invalid)"   
         style="margin-top: 5px;">  
-          <span *ngIf="iposaveform.get('date').errors.required"> date is Required</span>  
-            <span *ngIf = "iposaveform.get('date').errors.minlength">   
+          <span *ngIf="iposaveform.get('openDateTime').errors.required"> date is Required</span>  
+            <span *ngIf = "iposaveform.get('openDateTime').errors.minlength">   
                 MinLength Error   
             </span>                     
         </div>  

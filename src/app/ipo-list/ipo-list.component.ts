@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IposService } from '../ipos.service';
 import { Observable } from 'rxjs';
 import { Ipos } from '../ipos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ipo-list',
@@ -10,7 +11,7 @@ import { Ipos } from '../ipos';
 })
 export class IpoListComponent implements OnInit {
 
-  constructor(private iposervice:IposService) { }
+  constructor(private router:Router,private iposervice:IposService) { }
 ipoList:Observable<any[]>;
   ngOnInit() {
     this.iposervice.getAllIpo().subscribe(data=>{
@@ -24,6 +25,12 @@ ipoList:Observable<any[]>;
       });
     });
   }
-  
+  updateIpo(ipo:Ipos){
+    window.localStorage.removeItem("edit-id");
+    window.localStorage.setItem("edit-id", ipo.id.toString());
+
+    this.router.navigate(['ipos']);
+    
+  }
 
 }
