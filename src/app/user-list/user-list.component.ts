@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Observable } from 'rxjs';
+import { User } from '../user';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private userservice:UserService) { }
+  constructor(private router:Router,private userservice:UserService) { }
   userList:Observable<any[]>;
   
   ngOnInit() {
@@ -19,10 +21,19 @@ export class UserListComponent implements OnInit {
     });
      
   }
+  deleteUser(user:User){
+    this.userservice.deleteUser(user.id).subscribe(data=>{
+      this.userservice.getAllUser().subscribe(data=>{
+        this.userList=data;
+      });
+    });
+  }
+  updateUser(company:User){
+    window.localStorage.removeItem("edit-id");
+    window.localStorage.setItem("edit-id", company.id.toString());
 
-  
- 
-
-
+    this.router.navigate(['signup']);
+    
+  }
 
 }

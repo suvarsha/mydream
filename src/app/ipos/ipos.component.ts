@@ -41,7 +41,7 @@ saveipos(saveipos)
 }
 save()
 {
-  this.iposservice.savestock(this.ipos).subscribe(data=>console.log(data),error=>console.log(error));
+  this.iposservice.saveIpo(this.ipos).subscribe(data=>console.log(data),error=>console.log(error));
   this .ipos=new Ipos();
 }
 

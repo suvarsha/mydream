@@ -33,6 +33,7 @@ updateCompany(company:Managecompany){
   window.localStorage.removeItem("edit-stockCode");
   window.localStorage.setItem("edit-stockCode", company.stockCode.toString());
   this.router.navigate(['managecompany']);
+  
 }
 
 }

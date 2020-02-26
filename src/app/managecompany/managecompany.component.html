@@ -10,12 +10,12 @@
           <div class="form-group">  
             <h3>CREATE COMPANY</h3>  
             <label for="name">COMPANY NAME</label>  
-            <input type="text" class="form-control"  formControlName="company_name" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="companyName" data-toggle="tooltip"   
                data-placement="right" title="Enter  company name" >  
-            <div class="alert alert-danger" *ngIf = "(companysaveform.get('company_name').touched) && (companysaveform.get('company_name').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(companysaveform.get('companyName').touched) && (companysaveform.get('companyName').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="companysaveform.get('company_name').errors.required">Company Name is Required</span>  
-                  <span *ngIf = "companysaveform.get('company_name').errors.minlength">   
+                <span *ngIf="companysaveform.get('companyName').errors.required">Company Name is Required</span>  
+                  <span *ngIf = "companysaveform.get('companyName').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
@@ -34,36 +34,36 @@
       </div>
       <div class="form-group">  
         <label for="name">TURNOVER</label>  
-        <input type="text" class="form-control"  formControlName="turn_over" data-toggle="tooltip"   
+        <input type="text" class="form-control"  formControlName="turnOver" data-toggle="tooltip"   
            data-placement="right" title="Enter turnover" >  
-        <div class="alert alert-danger" *ngIf = "(companysaveform.get('turn_over').touched) && (companysaveform.get('turn_over').invalid)"   
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('turnOver').touched) && (companysaveform.get('turnOver').invalid)"   
           style="margin-top: 5px;">  
-            <span *ngIf="companysaveform.get('turn_over').errors.required">TURNOVER is Required</span>  
-              <span *ngIf = "companysaveform.get('turn_over').errors.minlength">   
+            <span *ngIf="companysaveform.get('turnOver').errors.required">TURNOVER is Required</span>  
+              <span *ngIf = "companysaveform.get('turnOver').errors.minlength">   
                   MinLength Error   
               </span>                     
           </div>  
     </div>
     <div class="form-group">  
       <label for="name">BOARD OF DIRECTORIES</label>  
-      <input type="text" class="form-control"  formControlName="board_of_directories" data-toggle="tooltip"   
+      <input type="text" class="form-control"  formControlName="boardOfDirectories" data-toggle="tooltip"   
          data-placement="right" title="Enter board of directories" >  
-      <div class="alert alert-danger" *ngIf = "(companysaveform.get('board_of_directories').touched) && (companysaveform.get('board_of_directories').invalid)"   
+      <div class="alert alert-danger" *ngIf = "(companysaveform.get('boardOfDirectories').touched) && (companysaveform.get('boardOfDirectories').invalid)"   
         style="margin-top: 5px;">  
-          <span *ngIf="companysaveform.get('board_of_directories').errors.required">board of directories is Required</span>  
-            <span *ngIf = "companysaveform.get('board_of_directories').errors.minlength">   
+          <span *ngIf="companysaveform.get('boardOfDirectories').errors.required">board of directories is Required</span>  
+            <span *ngIf = "companysaveform.get('boardOfDirectories').errors.minlength">   
                 MinLength Error   
             </span>                     
         </div>  
   </div>
   <div class="form-group">  
     <label for="name">STOCKCODE</label>  
-    <input type="text" class="form-control"  formControlName="stock_code" data-toggle="tooltip"   
+    <input type="text" class="form-control"  formControlName="stockCode" data-toggle="tooltip"   
        data-placement="right" title="Enter stock code" >  
-    <div class="alert alert-danger" *ngIf = "(companysaveform.get('stock_code').touched) && (companysaveform.get('stock_code').invalid)"   
+    <div class="alert alert-danger" *ngIf = "(companysaveform.get('stockCode').touched) && (companysaveform.get('stockCode').invalid)"   
       style="margin-top: 5px;">  
-        <span *ngIf="companysaveform.get('stock_code').errors.required">stockcode  is Required</span>  
-          <span *ngIf = "companysaveform.get('stock_code').errors.minlength">   
+        <span *ngIf="companysaveform.get('stockCode').errors.required">stockcode  is Required</span>  
+          <span *ngIf = "companysaveform.get('stockCode').errors.minlength">   
               MinLength Error   
           </span>                     
       </div>  
@@ -82,12 +82,12 @@
 </div>
 <div class="form-group">  
   <label for="name">LIST OF STOCK EXCHANGE</label>  
-  <input type="text" class="form-control"  formControlName="list_of_stock_exchange" data-toggle="tooltip"   
+  <input type="text" class="form-control"  formControlName="listOfStockExchange" data-toggle="tooltip"   
      data-placement="right" title="Enter stock exchange" >  
-  <div class="alert alert-danger" *ngIf = "(companysaveform.get('list_of_stock_exchange').touched) && (companysaveform.get('list_of_stock_exchange').invalid)"   
+  <div class="alert alert-danger" *ngIf = "(companysaveform.get('listOfStockExchange').touched) && (companysaveform.get('listOfStockExchange').invalid)"   
     style="margin-top: 5px;">  
-      <span *ngIf="companysaveform.get('list_of_stock_exchange').errors.required">stock exchange  is Required</span>  
-        <span *ngIf = "companysaveform.get('list_of_stock_exchange').errors.minlength">   
+      <span *ngIf="companysaveform.get('listOfStockExchange').errors.required">stock exchange  is Required</span>  
+        <span *ngIf = "companysaveform.get('listOfStockExchange').errors.minlength">   
             MinLength Error   
         </span>                     
     </div>  

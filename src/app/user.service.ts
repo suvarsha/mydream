@@ -19,9 +19,12 @@ export class UserService {
   updateUser(id:String):Observable<object>{
     return this.http.put(this.baseUrl+'/putuser/${id}',id);
   }
-  deleteUser(id:String):boolean{
-   this.http.delete(this.baseUrl+'deleteUser/${id}',{responseType:'json'});
-   return true;
+  deleteUser(id:String):Observable<object>{
+   return this.http.delete(this.baseUrl+'/deleteUser/'+id);
+
   }
+  findOneInAll(id:String):Observable<any>{
+    return this.http.get(this.baseUrl+'/find/'+id);
+      }
 
 }
