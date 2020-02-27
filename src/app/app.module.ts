@@ -22,6 +22,7 @@ import { SectorComponent } from './sector/sector.component';
 import { SectorListComponent } from './sector-list/sector-list.component';
 import { StockexchangeComponent } from './stockexchange/stockexchange.component';
 import { StockListComponent } from './stock-list/stock-list.component';
+import { StockpriceComponent } from './stockprice/stockprice.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { StockListComponent } from './stock-list/stock-list.component';
     SectorComponent,
     SectorListComponent,
     StockexchangeComponent,
-    StockListComponent
+    StockListComponent,
+    StockpriceComponent
   ],
   imports: [
     BrowserModule,

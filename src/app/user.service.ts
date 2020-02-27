@@ -26,5 +26,8 @@ export class UserService {
   findOneInAll(id:String):Observable<any>{
     return this.http.get(this.baseUrl+'/find/'+id);
       }
+      findUserNameAndPassword(userName:String,password:String):Observable<User>{
+        return this.http.get<User>(this.baseUrl+'/findByUserNameAndPassword/'+userName+'/'+password);
+      }
 
 }

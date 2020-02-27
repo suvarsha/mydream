@@ -11,12 +11,12 @@
           <div class="form-group">  
             <h3>sector</h3>  
             <label for="name">ID</label>  
-            <input type="text" class="form-control"  formControlName="sector_id" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter User Id" >  
-            <div class="alert alert-danger" *ngIf = "(sectorSaveForm.get('sector_id').touched) && (sectorSaveForm.get('sector_id').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(sectorSaveForm.get('id').touched) && (sectorSaveForm.get('id').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="sectorSaveForm.get('sector_id').errors.required"> User Name is Required</span>  
-                  <span *ngIf = "sectorSaveForm.get('sector_id').errors.minlength">   
+                <span *ngIf="sectorSaveForm.get('id').errors.required"> User Name is Required</span>  
+                  <span *ngIf = "sectorSaveForm.get('id').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
@@ -24,12 +24,12 @@
         <div class="form-group">  
         
             <label for="name">SECTORNAME</label>  
-            <input type="text" class="form-control"  formControlName="sector_Name" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="sectorName" data-toggle="tooltip"   
                data-placement="right" title="Enter sector name" >  
-            <div class="alert alert-danger" *ngIf = "(sectorSaveForm.get('sector_Name').touched) && (sectorSaveForm.get('sector_Name').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(sectorSaveForm.get('sectorName').touched) && (sectorSaveForm.get('sectorName').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="sectorSaveForm.get('sector_Name').errors.required"> Sector Name is Required</span>  
-                  <span *ngIf = "sectorSaveForm.get('sector_Name').errors.minlength">   
+                <span *ngIf="sectorSaveForm.get('sectorName').errors.required"> Sector Name is Required</span>  
+                  <span *ngIf = "sectorSaveForm.get('sectorName').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
