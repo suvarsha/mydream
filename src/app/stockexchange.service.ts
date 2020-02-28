@@ -19,16 +19,12 @@ export class StockexchangeService {
   updatestockExchange(id:String):Observable<object>{
     return this.http.put(this.baseUrl+'/putstockExchange/{id}',id);
   }
-  deletestockExchange(id:String):boolean{
-   this.http.delete(this.baseUrl+'deletestockExchange/{id}',{responseType:'json'});
-   return true;
+  deletestockExchange(id:String):Observable<object>{
+   return this.http.delete(this.baseUrl+'/deletestockExchange/'+id);
+  
   }
-
-
-
-
-
-
+  findOneInAll(id:String):Observable<any>{
+    return this.http.get(this.baseUrl+'/findstockExchange/'+id);}
 
 
 }

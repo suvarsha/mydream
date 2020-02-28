@@ -23,6 +23,7 @@ import { SectorListComponent } from './sector-list/sector-list.component';
 import { StockexchangeComponent } from './stockexchange/stockexchange.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockpriceComponent } from './stockprice/stockprice.component';
+import { StockpriceListComponent } from './stockprice-list/stockprice-list.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { StockpriceComponent } from './stockprice/stockprice.component';
     SectorListComponent,
     StockexchangeComponent,
     StockListComponent,
-    StockpriceComponent
+    StockpriceComponent,
+    StockpriceListComponent
   ],
   imports: [
     BrowserModule,
@@ -146,6 +148,18 @@ import { StockpriceComponent } from './stockprice/stockprice.component';
       {
         path:'stock-list',
         component:StockListComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'stockprice',
+        component:StockpriceComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'stockprice-list',
+        component:StockpriceListComponent
       }
     ])
 

@@ -12,24 +12,24 @@
           <div class="form-group">  
             <h3>STOCK EXCHANGE</h3>  
             <label for="name">ID</label>  
-            <input type="text" class="form-control"  formControlName="exchange_id" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter stock id" >  
-            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('exchange_id').touched) && (exchangeSaveForm.get('exchange_id').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('id').touched) && (exchangeSaveForm.get('id').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="exchangeSaveForm.get('exchange_id').errors.required"> id is Required</span>  
-                  <span *ngIf = "exchangeSaveForm.get('exchange_id').errors.minlength">   
+                <span *ngIf="exchangeSaveForm.get('id').errors.required"> id is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('id').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
         </div>
         <div class="form-group">   
             <label for="name">STOCKEXCHANGE</label>  
-            <input type="text" class="form-control"  formControlName="stock_ex" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="stockEx" data-toggle="tooltip"   
                data-placement="right" title="Enter stock id" >  
-            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('stock_ex').touched) && (exchangeSaveForm.get('stock_ex').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('stockEx').touched) && (exchangeSaveForm.get('stockEx').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="exchangeSaveForm.get('stock_ex').errors.required"> stock exchange is Required</span>  
-                  <span *ngIf = "exchangeSaveForm.get('stock_ex').errors.minlength">   
+                <span *ngIf="exchangeSaveForm.get('stockEx').errors.required"> stock exchange is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('stockEx').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
@@ -48,12 +48,12 @@
         </div> 
         <div class="form-group">   
             <label for="name">CONTACT ADDRESS</label>  
-            <input type="text" class="form-control"  formControlName="contact_Address" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="contactAddress" data-toggle="tooltip"   
                data-placement="right" title="Enter contact" >  
-            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('contact_Address').touched) && (exchangeSaveForm.get('contact_Address').invalid)"   
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('contactAddress').touched) && (exchangeSaveForm.get('contactAddress').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="exchangeSaveForm.get('contact_Address').errors.required"> contact address is Required</span>  
-                  <span *ngIf = "exchangeSaveForm.get('contact_Address').errors.minlength">   
+                <span *ngIf="exchangeSaveForm.get('contactAddress').errors.required"> contact address is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('contactAddress').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
