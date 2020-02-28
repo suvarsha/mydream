@@ -24,6 +24,7 @@ import { StockexchangeComponent } from './stockexchange/stockexchange.component'
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockpriceComponent } from './stockprice/stockprice.component';
 import { StockpriceListComponent } from './stockprice-list/stockprice-list.component';
+import { CompareCompanyComponent } from './compare-company/compare-company.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { StockpriceListComponent } from './stockprice-list/stockprice-list.compo
     StockexchangeComponent,
     StockListComponent,
     StockpriceComponent,
-    StockpriceListComponent
+    StockpriceListComponent,
+    CompareCompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { StockpriceListComponent } from './stockprice-list/stockprice-list.compo
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
     RouterModule.forRoot([
       {
         path:'login',
@@ -160,6 +163,12 @@ import { StockpriceListComponent } from './stockprice-list/stockprice-list.compo
       {
         path:'stockprice-list',
         component:StockpriceListComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
+        path:'compare-company',
+        component:CompareCompanyComponent
       }
     ])
 
