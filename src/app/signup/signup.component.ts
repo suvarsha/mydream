@@ -14,15 +14,16 @@ export class SignupComponent implements OnInit {
 
   constructor(private router:Router,private userservice:UserService) { }
   user : User=new User();
-  message:String="SIGNUP";
+ 
   submitted = false;  
+  message:String="SIGNUP";
   ngOnInit() {
    var id= window.localStorage.getItem("edit-userid");
 
     if(id!==null&&id!="")
     {
 
-this.message="update record";
+this.message="UPDATE"
       this.userservice.findOneInAll(id)
     .subscribe(data => { this.user =data;
       this.usersaveform.setValue(this.user);

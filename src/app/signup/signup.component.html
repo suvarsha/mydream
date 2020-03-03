@@ -1,19 +1,16 @@
 
 <div class="row"> 
     
-  <div class="col-sm-1"></div>
-  <div class="col-sm-5">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-2NiZhiL3kUWy2JwzJoHwcvQ9ROMRag7fp-uh-EH1QVcsCE40" style="width: 400px; height: 300px;">
-  </div> 
-
+  <div class="col-sm-6"></div>
+  
 
   <div class="col-sm-6" > 
      
     <div [hidden]="submitted" style="width: 400px;">  
-      <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="usersaveform">  
+      <br>
+      <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="usersaveform" class="form-container border border-dark p-5 ">  
         <div class="form-group">  
           <h3>{{message}}</h3>
-          
           <label for="name">ID</label>  
           <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
              data-placement="right" title="Enter User Id" >  
@@ -103,7 +100,9 @@
   </div>  
     
           <button type="submit"    class="btn btn-success">Submit</button>  
-      </form>  
+        
+      </form> 
+      <br> 
   </div>  
   </div>  
 </div>  

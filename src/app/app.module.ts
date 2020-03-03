@@ -83,6 +83,12 @@ import { CompareCompanyComponent } from './compare-company/compare-company.compo
     ]),
     RouterModule.forRoot([
       {
+        path:'',
+        component:HomeComponent
+      }
+    ]),
+    RouterModule.forRoot([
+      {
         path:'admin',
         component:AdminComponent
       }

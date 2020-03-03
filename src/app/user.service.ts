@@ -8,7 +8,7 @@ import { User } from './user';
 })
 export class UserService {
 
-  private baseUrl = 'http://localhost:8890/users'; 
+  private baseUrl = 'http://localhost:8890/UserPortal'; 
   constructor(private http:HttpClient) { }
   getAllUser():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllUser');

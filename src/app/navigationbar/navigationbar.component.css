@@ -2,8 +2,32 @@ body{
 
     text-align: center;
     color:darkblue;
+    background-color:cornsilk;
+   
+    position:relative;
+
+  min-height: 50px;
+
+  margin-bottom: 0px !important;
+
+  border: 1px solid transparent;
+    
 }
 .navbar-nav li a{
-    color:orange;
+    color:darksalmon;
     font-size: 18px;
+    font-size: small;
+}
+.navbar
+
+{
+
+  position:relative;
+
+  min-height: 50px;
+
+  margin-bottom: 0px !important;
+
+  border: 1px solid transparent;
+
 }
