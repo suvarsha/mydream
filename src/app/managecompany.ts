@@ -7,6 +7,7 @@ export class Managecompany {
     listOfStockExchange:String;
     sector:String;
     brief:String;
+  filter: any;
 
 
 

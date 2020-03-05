@@ -25,6 +25,10 @@ import { StockListComponent } from './stock-list/stock-list.component';
 import { StockpriceComponent } from './stockprice/stockprice.component';
 import { StockpriceListComponent } from './stockprice-list/stockprice-list.component';
 import { CompareCompanyComponent } from './compare-company/compare-company.component';
+import { HighchartsService } from './compare-company/Highcharts.service';
+import { HighchartsChartModule } from 'highcharts-angular';
+
+
 
 @NgModule({
   declarations: [
@@ -56,6 +60,7 @@ import { CompareCompanyComponent } from './compare-company/compare-company.compo
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    HighchartsChartModule,
     
     RouterModule.forRoot([
       {
@@ -181,7 +186,7 @@ import { CompareCompanyComponent } from './compare-company/compare-company.compo
 
 
   ],
-  providers: [],
+  providers: [HighchartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

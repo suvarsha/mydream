@@ -25,12 +25,16 @@ export class LoginComponent implements OnInit {
   {
     this.user=new User();
     this.user.userName=this.loginSaveForm.get('userName').value;
+    alert(this.user.userName)
+    
     this.user.password=this.loginSaveForm.get('password').value
-
+    alert(this.user.password)
     this.userservice.findUserNameAndPassword(this.user.userName,this.user.password).subscribe(data=>{
       this.user=data;
+      alert(this.user);
       if(this.user!=null&&this.user.userType=='user')
       {
+        
 this.router.navigate(['/user'])
       }
       else if(this.user!=null&&this.user.userType=='admin')
