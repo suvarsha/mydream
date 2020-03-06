@@ -1,0 +1,7 @@
+.row{
+    background-image: url("../images/stockprice.jpg");
+    height: 650px;
+    width: 1330px;
+    background-size: cover;
+    color: floralwhite;
+}

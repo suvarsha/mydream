@@ -10,7 +10,7 @@ import { Managecompany } from './managecompany';
 export class ManagecompanyService {
 
  
-  private baseUrl = 'http://localhost:8890/company'; 
+  private baseUrl = 'http://localhost:8895/company'; 
   constructor(private http:HttpClient) { }
   getAllUser():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllcompanydata');''

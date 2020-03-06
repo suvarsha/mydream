@@ -1,14 +1,13 @@
 
 <div class="row"> 
-    
-  <div class="col-sm-6"></div>
+    <div class="col-sm-1"></div>
+  <div class="col-sm-6">
   
 
-  <div class="col-sm-6" > 
+ 
      
     <div [hidden]="submitted" style="width: 400px;">  
-      <br>
-      <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="usersaveform" class="form-container border border-dark p-5 ">  
+      <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="usersaveform"  >  
         <div class="form-group">  
           <h3>{{message}}</h3>
           <label for="name">ID</label>  

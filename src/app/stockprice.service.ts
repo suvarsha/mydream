@@ -7,7 +7,7 @@ import { Stockprice } from './stockprice';
   providedIn: 'root'
 })
 export class StockpriceService {
-  private baseUrl = 'http://localhost:8890/stockprice'; 
+  private baseUrl = 'http://localhost:8891/stockprice'; 
   constructor(private http:HttpClient) { }
 
   getAllPrice():Observable<any>{

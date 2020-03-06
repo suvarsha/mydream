@@ -7,7 +7,7 @@ import { Ipos } from './ipos';
   providedIn: 'root'
 })
 export class IposService {
-  private baseUrl = 'http://localhost:8890/ipos'; 
+  private baseUrl = 'http://localhost:8893/ipos'; 
  
   constructor(private http:HttpClient) { }
   getAllIpo():Observable<any>{

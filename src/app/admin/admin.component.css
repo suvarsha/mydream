@@ -1,3 +1,10 @@
 .navbar a{
 font-size: small;
+color: orange;
+}
+.bg{
+    background-image: url("https://ctcronullacaringbah.com.au/wp-content/uploads/2017/09/Computer-Troubleshooters-remote-support-services-background-image-larger.jpg");
+    height: 650px;
+    width: 1300px;
+    background-size: cover;
 }

@@ -8,7 +8,7 @@ import { Stockexchange } from './stockexchange';
 })
 export class StockexchangeService {
   [x: string]: any;
-  private baseUrl = 'http://localhost:8890/stockExchange';
+  private baseUrl = 'http://localhost:8892/stockExchange';
   constructor(private http:HttpClient) { }
   getAllstockExchange():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllStockExchange');''

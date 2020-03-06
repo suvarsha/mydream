@@ -7,7 +7,7 @@ import { Sector } from './sector';
   providedIn: 'root'
 })
 export class SectorService {
-  private baseUrl = 'http://localhost:8890/sector'; 
+  private baseUrl = 'http://localhost:8894/sector'; 
   constructor(private http:HttpClient) { }
   getAllsector():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllsector');
