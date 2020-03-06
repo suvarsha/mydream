@@ -47,10 +47,10 @@ email:new FormControl('',[Validators.required,Validators.email])
        
        this.user.userName=this.usersaveform.get('userName').value;
        this.user.password=this.usersaveform.get('password').value;
-       this.user.userType=this.usersaveform.get('userType').value;
+       this.user.userType='user'
        console.log(this.user.userType);
        this.user.mobileNumber=this.usersaveform.get('mobileNumber').value;
-       this.user.confirmed=this.usersaveform.get('confirmed').value;
+       this.user.confirmed='no';
        this.user.email=this.usersaveform.get('email').value;
        this.submitted=true;
        this.save();

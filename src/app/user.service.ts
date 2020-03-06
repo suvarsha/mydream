@@ -8,13 +8,13 @@ import { User } from './user';
 })
 export class UserService {
 
-  private baseUrl = 'http://localhost:8890/UserPortal'; 
+  private baseUrl = 'http://localhost:8896/Userssss/UserPortal'; 
   constructor(private http:HttpClient) { }
   getAllUser():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllUser');
   }
   saveUser(user:User):Observable<User>{
-    return this.http.post<User>(this.baseUrl+'/postuser',user)
+    return this.http.post<User>(this.baseUrl+'/saveUser',user)
   }
   updateUser(id:String):Observable<object>{
     return this.http.put(this.baseUrl+'/putuser/${id}',id);
