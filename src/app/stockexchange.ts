@@ -1,7 +1,7 @@
 export class Stockexchange {
 
     id:String;
-    stockEx:String;
+    stockExchange:String;
     brief:String;
     contactAddress:String;
     remarks:String

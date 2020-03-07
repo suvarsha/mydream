@@ -24,12 +24,12 @@
         </div>
         <div class="form-group">   
             <label for="name">STOCKEXCHANGE</label>  
-            <input type="text" class="form-control"  formControlName="stockEx" data-toggle="tooltip"   
-               data-placement="right" title="Enter stock id" >  
-            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('stockEx').touched) && (exchangeSaveForm.get('stockEx').invalid)"   
+            <input type="text" class="form-control"  formControlName="stockExchange" data-toggle="tooltip"   
+               data-placement="right" title="Enter stock stockExchange" >  
+            <div class="alert alert-danger" *ngIf = "(exchangeSaveForm.get('stockExchange').touched) && (exchangeSaveForm.get('stockExchange').invalid)"   
               style="margin-top: 5px;">  
-                <span *ngIf="exchangeSaveForm.get('stockEx').errors.required"> stock exchange is Required</span>  
-                  <span *ngIf = "exchangeSaveForm.get('stockEx').errors.minlength">   
+                <span *ngIf="exchangeSaveForm.get('stockExchange').errors.required"> stock exchange is Required</span>  
+                  <span *ngIf = "exchangeSaveForm.get('stockExchange').errors.minlength">   
                       MinLength Error   
                   </span>                     
               </div>  
@@ -67,8 +67,8 @@
                 <span *ngIf="exchangeSaveForm.get('remarks').errors.required"> remark is Required</span>  
                   <span *ngIf = "exchangeSaveForm.get('remarks').errors.minlength">   
                       MinLength Error   
-                  </span>                     
-              </div>  
+                  </span>                      
+              </div>      
         </div> 
         
         <button type="submit"    class="btn btn-success">Submit</button>  

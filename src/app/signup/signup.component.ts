@@ -35,33 +35,38 @@ this.message="UPDATE"
 id:new FormControl('',[Validators.required,Validators.minLength(5)]),
 userName:new FormControl('',[Validators.required,Validators.minLength(5)]),
 password:new FormControl('',[Validators.required,Validators.minLength(6)]),
-userType:new FormControl('',[Validators.required]),
+userType:new FormControl(),
 mobileNumber:new FormControl('',[Validators.required,Validators.minLength(10)]),
-confirmed:new FormControl('',[Validators.required]),
+confirmed:new FormControl(),
 email:new FormControl('',[Validators.required,Validators.email])
 
      });
      saveUser(saveUser){
-       this.user=this.user;
+       if(this.usersaveform.invalid){
+         alert("invalid");
+       }
+       else{
+       this.user=new User();
        this.user.id=this.usersaveform.get('id').value;
        
        this.user.userName=this.usersaveform.get('userName').value;
        this.user.password=this.usersaveform.get('password').value;
        this.user.userType='user'
-       console.log(this.user.userType);
+     
        this.user.mobileNumber=this.usersaveform.get('mobileNumber').value;
        this.user.confirmed='no';
        this.user.email=this.usersaveform.get('email').value;
        this.submitted=true;
        this.save();
 }
+     }
 save()
 {
   this.userservice.saveUser(this.user).subscribe(data=>console.log(data),error=>console.log(error));
   this .user=new User();
   window.localStorage.removeItem("edit-userid");
   alert("updated successfully")
-  this.router.navigate(['home']);
+  this.router.navigate(['login']);
 }
 usersaveForm(){
   this.submitted=false;

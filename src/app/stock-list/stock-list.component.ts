@@ -20,7 +20,7 @@ export class StockListComponent implements OnInit {
 }
 
 deleteStock(exchange:Stockexchange){
-  this.exchangeservice.deletestockExchange(exchange.id).subscribe(data=>{
+  this.exchangeservice.deletestockExchange(exchange.stockExchange).subscribe(data=>{
     this.exchangeservice.getAllstockExchange().subscribe(data=>{
       this.stockList=data;
     });
@@ -28,8 +28,8 @@ deleteStock(exchange:Stockexchange){
 }
 
 updateStock(exchange:Stockexchange){
-  window.localStorage.removeItem("edit-stockid");
-  window.localStorage.setItem("edit-stockid", exchange.id.toString());
+  window.localStorage.removeItem("edit-stockExchange");
+  window.localStorage.setItem("edit-stockExchange", exchange.stockExchange.toString());
 
   this.router.navigate(['stockexchange']);
   

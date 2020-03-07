@@ -8,7 +8,7 @@ import { Stockexchange } from './stockexchange';
 })
 export class StockexchangeService {
   [x: string]: any;
-  private baseUrl = 'http://localhost:8892/stockExchange';
+  private baseUrl = 'http://localhost:8896/stockexchange/stockExchange';
   constructor(private http:HttpClient) { }
   getAllstockExchange():Observable<any>{
     return this.http.get<any>(this.baseUrl+'/getAllStockExchange');''
@@ -16,15 +16,15 @@ export class StockexchangeService {
   savestockExchange(stock:Stockexchange):Observable<Stockexchange>{
     return this.http.post<Stockexchange>(this.baseUrl+'/saveStockExchange',stock)
   }
-  updatestockExchange(id:String):Observable<object>{
-    return this.http.put(this.baseUrl+'/putstockExchange/{id}',id);
+  updatestockExchange(stockExchange:String):Observable<object>{
+    return this.http.put(this.baseUrl+'/putstockExchange/{stockExchange}',stockExchange);
   }
-  deletestockExchange(id:String):Observable<object>{
-   return this.http.delete(this.baseUrl+'/deletestockExchange/'+id);
+  deletestockExchange(stockExchange:String):Observable<object>{
+   return this.http.delete(this.baseUrl+'/deletestockExchange/'+stockExchange);
   
   }
-  findOneInAll(id:String):Observable<any>{
-    return this.http.get(this.baseUrl+'/findstockExchange/'+id);}
+  findOneInAll(stockExchange:String):Observable<any>{
+    return this.http.get(this.baseUrl+'/findstockExchange/'+stockExchange);}
 
 
 }

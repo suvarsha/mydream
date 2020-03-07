@@ -15,7 +15,7 @@ export class StockexchangeComponent implements OnInit {
   exchange : Stockexchange=new Stockexchange();
   submitted = false; 
   ngOnInit() {
-    var id= window.localStorage.getItem("edit-stockid");
+    var id= window.localStorage.getItem("edit-stockExchange");
 
     if(id!==null&&id!="")
     {
@@ -29,7 +29,7 @@ export class StockexchangeComponent implements OnInit {
   }
   exchangeSaveForm=new FormGroup({
 id:new FormControl('',[Validators.required,Validators.minLength(5)]),
-stockEx:new FormControl('',[Validators.required,Validators.minLength(5)]),
+stockExchange:new FormControl('',[Validators.required,Validators.minLength(5)]),
 brief:new FormControl('',[Validators.required,Validators.minLength(5)]),
 contactAddress:new FormControl('',[Validators.required,Validators.minLength(5)]),
 remarks:new FormControl('',[Validators.required,Validators.minLength(5)]),
@@ -38,7 +38,7 @@ remarks:new FormControl('',[Validators.required,Validators.minLength(5)]),
   saveExchange(saveExchange){
     this.exchange=this.exchange;
     this.exchange.id=this.exchangeSaveForm.get('id').value;
-    this.exchange.stockEx=this.exchangeSaveForm.get('stockEx').value;
+    this.exchange.stockExchange=this.exchangeSaveForm.get('stockExchange').value;
     this.exchange.brief=this.exchangeSaveForm.get('brief').value;
     this.exchange.contactAddress=this.exchangeSaveForm.get('contactAddress').value;
     this.exchange.remarks=this.exchangeSaveForm.get('remarks').value;
@@ -50,7 +50,7 @@ save()
 {
 this.stockservice.savestockExchange(this.exchange).subscribe(data=>console.log(data),error=>console.log(error));
 this .exchange=new Stockexchange();
-window.localStorage.removeItem("edit-stockid");
+window.localStorage.removeItem("edit-stockExchange");
 alert("updated successfully")
 this.router.navigate(['home']);
 }
