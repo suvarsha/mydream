@@ -1,0 +1,12 @@
+.bg{
+    background-image: url("../images/user.jpg");
+    height: 650px;
+    width: 1265px;
+    background-size: cover;
+  
+}
+.navbar a{
+    font-size: medium;
+    color: black;
+
+}
