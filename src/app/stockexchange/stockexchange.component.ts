@@ -14,12 +14,13 @@ export class StockexchangeComponent implements OnInit {
   constructor(private router:Router,private stockservice:StockexchangeService) { }
   exchange : Stockexchange=new Stockexchange();
   submitted = false; 
+  message:String="CREATE STOCKEXCHANGE";
   ngOnInit() {
     var id= window.localStorage.getItem("edit-stockExchange");
 
     if(id!==null&&id!="")
     {
-
+      this.message="UPDATE STOCKEXCHANGE";
       this.stockservice.findOneInAll(id)
     .subscribe(data => { this.exchange =data;
       this.exchangeSaveForm.setValue(this.exchange);
@@ -36,7 +37,11 @@ remarks:new FormControl('',[Validators.required,Validators.minLength(5)]),
     
   });
   saveExchange(saveExchange){
-    this.exchange=this.exchange;
+    if(this.exchangeSaveForm.invalid){
+      alert("invalid");
+    }
+    else{
+    this.exchange=new Stockexchange();
     this.exchange.id=this.exchangeSaveForm.get('id').value;
     this.exchange.stockExchange=this.exchangeSaveForm.get('stockExchange').value;
     this.exchange.brief=this.exchangeSaveForm.get('brief').value;
@@ -45,7 +50,7 @@ remarks:new FormControl('',[Validators.required,Validators.minLength(5)]),
 
     this.submitted=true;
     this.save();
-}
+}}
 save()
 {
 this.stockservice.savestockExchange(this.exchange).subscribe(data=>console.log(data),error=>console.log(error));

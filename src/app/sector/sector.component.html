@@ -9,7 +9,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #savesector1 (ngSubmit)="savesector(savesector1)"  [formGroup]="sectorSaveForm">  
           <div class="form-group">  
-            <h3>sector</h3>  
+            <h3>{{message}}</h3>  
             <label for="name">ID</label>  
             <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter User Id" >  

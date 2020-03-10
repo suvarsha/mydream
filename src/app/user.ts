@@ -6,5 +6,6 @@ export class User {
     mobileNumber:number;
     confirmed:string;
     email:String;
+    profileImage:String;
 
 }

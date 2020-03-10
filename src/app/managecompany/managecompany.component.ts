@@ -14,11 +14,13 @@ export class ManagecompanyComponent implements OnInit {
   constructor(private router: Router,private manageservice:ManagecompanyService) { }
   company : Managecompany=new Managecompany();
   submitted=false;
+  message:String="CREATE COMPANY";
  ngOnInit() {
 
   var stockcode=window.localStorage.getItem("edit-stockCode");
  
   if(stockcode!=null&&stockcode!=""){
+    this.message="UPDATE COMPANY";
 this.manageservice.findOneInAll(stockcode)
     .subscribe(data => { this.company =data;
      

@@ -14,6 +14,7 @@
                 <th>CONFIRMED</th>
                 <th>DELETE</th>
                 <th>UPDATE</th>
+                <th>PROFILEIMAGE</th>
                   
             </tr>  
         </thead>  
@@ -29,6 +30,7 @@
                 
                 <td><button (click)="deleteUser(user)"   class="btn btn-danger">Delete</button> </td>
                 <td><button (click)="updateUser(user)"   class="btn btn-success">Update</button> </td>
+                <td>{{user.profileImage}}</td>
             </tr>
             </tbody>
             </table>

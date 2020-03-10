@@ -9,7 +9,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #saveipos1 (ngSubmit)="saveipos(saveipos1)"  [formGroup]="iposaveform">  
           <div class="form-group">  
-            <h3>IPOS</h3>  
+            <h3>{{message}}</h3>  
             <label for="name">ID</label>  
             <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter  Id" >  

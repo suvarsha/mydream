@@ -9,7 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { ImportComponent } from './import/import.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,7 +39,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     NavigationbarComponent,
     ImportComponent,
     LoginComponent,
-    LogoutComponent,
+   
     SignupComponent,
     UserListComponent,
     ManagecompanyComponent,

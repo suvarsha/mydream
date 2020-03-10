@@ -64,7 +64,7 @@
         </div>  
         <div class="form-group">  
           <label for="name"> MobileNumber</label>  
-          <input type="number" class="form-control" formControlName="mobileNumber" data-toggle="tooltip"  
+          <input type="number" class="form-control" formControlName="mobileNumber" data-toggle="tooltip"  pattern="^\d{10}$"
         data-placement="right" title="Enter mobileNumber">  
             <div class="alert alert-danger" *ngIf = "(usersaveform.get('mobileNumber').touched) && (usersaveform.get('mobileNumber').invalid)"   
             style="margin-top: 5px;">  
@@ -72,15 +72,17 @@
                 <span *ngIf = "usersaveform.get('mobileNumber').errors.mobile_number">   
                     Invalid mobileNumber Format   
                 </span> 
-                <span *ngIf = "usersaveform.get('mobileNumber').errors.minlength">   
-                  MinLength 0f 10 numbers   
+                <span *ngIf = "usersaveform.get('mobileNumber').errors.pattern">   
+               Enter valid mobileNumber(10) 
               </span>                     
             </div>  
       </div>
-      
+      <div class="form-group">  
+     <label for="profileImage">Upload Image</label>  
+            <input formControlName="profileImage" class="form-control" type="file"(change)="selectFile($event)">   
+        </div>  
     
-    
-          <button type="submit"    class="btn btn-success" >Submit</button>  
+       <button type="submit"    class="btn btn-success" >Submit</button>  
         
       </form> 
       <br> 

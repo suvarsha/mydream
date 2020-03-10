@@ -14,11 +14,12 @@ export class IposComponent implements OnInit {
   constructor(private router:Router,private iposservice:IposService) { }
   ipos : Ipos=new Ipos();
   submitted=false;
-
+  message:String="CREATE IPO";
   ngOnInit() {
     var id= window.localStorage.getItem("edit-id");
     if(id!==null&&id!="")
     {
+      this.message="UPDATE IPO";
       this.iposservice.findOneInAll(id)
     .subscribe(data => { this.ipos =data;
       this.iposaveform.setValue(this.ipos);
@@ -39,7 +40,11 @@ export class IposComponent implements OnInit {
 })
 saveipos(saveipos)
 {
-  this.ipos=this.ipos;
+  if(this.iposaveform.invalid){
+    alert("invalid");
+  }
+  else{
+  this.ipos=new Ipos();
   this.ipos.id=this.iposaveform.get('id').value;
   this.ipos.companyName=this.iposaveform.get('companyName').value;
   this.ipos.stockExchange=this.iposaveform.get('stockExchange').value;
@@ -49,6 +54,7 @@ saveipos(saveipos)
   this.ipos.remarks=this.iposaveform.get('remarks').value;
   this.submitted=true;
   this.save();
+}
 }
 save()
 {

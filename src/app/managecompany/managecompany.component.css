@@ -1,6 +1,7 @@
 .row{
-    background-image: url("https://lh3.googleusercontent.com/proxy/JUjgVSkyBgO7HvFN8GlEYvgKZIRYFefA8g_kr6QgtXvx3ooLWLS69K5-2EhnayIMssLc14HtRMhY0dmRmTPGKb-oyZiMdrQfWSKKKC1NLlw7ZI7yB3ayRHawR5uwoHqfV7cnAvLXwcwJN_CN");
+    background-image: url("../images/home2.jpg");
     background-size: cover;
     height: 750px;
     width: 1330px;
+    color: floralwhite;
 }

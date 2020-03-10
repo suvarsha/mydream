@@ -8,7 +8,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #savecompanydata1 (ngSubmit)="savecompanydata(savecompanydata1)"  [formGroup]="companysaveform">  
           <div class="form-group">  
-            <h3>CREATE COMPANY</h3>  
+            <h3>{{message}}</h3>  
             <label for="name">COMPANY NAME</label>  
             <input type="text" class="form-control"  formControlName="companyName" data-toggle="tooltip"   
                data-placement="right" title="Enter  company name" >  

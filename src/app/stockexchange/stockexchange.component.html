@@ -10,7 +10,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #saveExchange1 (ngSubmit)="saveExchange(saveExchange1)"  [formGroup]="exchangeSaveForm">  
           <div class="form-group">  
-            <h3>STOCK EXCHANGE</h3>  
+            <h3>{{message}}</h3>  
             <label for="name">ID</label>  
             <input type="text" class="form-control"  formControlName="id" data-toggle="tooltip"   
                data-placement="right" title="Enter stock id" >  

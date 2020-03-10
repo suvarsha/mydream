@@ -14,12 +14,14 @@ export class SectorComponent implements OnInit {
   constructor(private router:Router,private sectorservice:SectorService) { }
   sector: Sector=new Sector();
   submitted = false; 
+  message:String="CREATE SECTOR";
   ngOnInit() {
     this.submitted = false; 
     var id= window.localStorage.getItem("edit-sectorid");
 
     if(id!==null&&id!="")
     {
+      this.message="UPDATE SECTOR";
       this.sectorservice.findOneInAll(id)
     .subscribe(data => { this.sector =data;
       this.sectorSaveForm.setValue(this.sector);
@@ -33,12 +35,16 @@ sectorSaveForm=new FormGroup({
   brief:new FormControl('',[Validators.required,Validators.minLength(5)])
 });
 savesector(){
+  if(this.sectorSaveForm.invalid){
+    alert("invalid");
+  }else{
   this.sector=this.sector;
   this.sector.id=this.sectorSaveForm.get('id').value;
   this.sector.sectorName=this.sectorSaveForm.get('sectorName').value;
   this.sector.brief=this.sectorSaveForm.get('brief').value;
   this.submitted=true;
        this.save();
+}
 }
 save()
 {

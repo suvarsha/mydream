@@ -14,11 +14,13 @@ export class StockpriceComponent implements OnInit {
   constructor(private router:Router,private stockpriceservice:StockpriceService) { }
   price : Stockprice=new Stockprice();
   submitted = false; 
+  message:String="CREATE STOCKPRICE";
   ngOnInit() {
     var id= window.localStorage.getItem("edit-stockexchange");
 
     if(id!==null&&id!="")
     {
+      this.message="UPDATE STOCKPRICE";
       this.stockpriceservice.findOneInAll(id)
     .subscribe(data => { this.price =data;
       this.stockPriceform.setValue(this.price);
@@ -35,6 +37,9 @@ export class StockpriceComponent implements OnInit {
   });
   saveStockprice(saveStockprice)
   {
+    if(this.stockPriceform.invalid){
+      alert("invalid");
+    }else{
     this.price=new Stockprice();
     this.price.companyCode=this.stockPriceform.get('companyCode').value;
     this.price.stockExchange=this.stockPriceform.get('stockExchange').value;
@@ -42,7 +47,7 @@ export class StockpriceComponent implements OnInit {
     this.price.date=this.stockPriceform.get('date').value;
     this.submitted=true;
     this.save();
-
+    }
   }
   save()
 {

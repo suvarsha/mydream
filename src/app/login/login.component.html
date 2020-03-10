@@ -9,7 +9,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="loginSaveForm">  
           <div class="form-group">  
-            <h3>login</h3>  
+            <h3>Login</h3>  
             <label for="name">username</label>  
             <input type="text" class="form-control"  formControlName="userName" data-toggle="tooltip"   
                data-placement="right" title="Enter  Id" >  
@@ -35,6 +35,8 @@
             </div>  
       </div>
       <button type="submit"    class="btn btn-success">login</button>
+      <label>NewUser?</label>
+      <a routerLink="/signup">SignUp</a>
         </form>
         </div>
         </div>

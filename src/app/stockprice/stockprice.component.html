@@ -10,7 +10,7 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #saveStockprice1 (ngSubmit)="saveStockprice(saveStockprice1)"  [formGroup]="stockPriceform">  
           <div class="form-group">  
-            <h3>STOCK PRICE</h3>  
+            <h3>{{message}}</h3>  
             <label for="name">COMPANY CODE</label>  
             <input type="text" class="form-control"  formControlName="companyCode" data-toggle="tooltip"   
                data-placement="right" title="Enter company code" >  
