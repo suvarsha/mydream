@@ -88,7 +88,7 @@ save()
   this.userservice.saveUser(this.user).subscribe(data=>console.log(data),error=>console.log(error));
   this .user=new User();
   window.localStorage.removeItem("edit-userid");
-  alert("submitted successfully")
+  alert("confirmation mail sent to your mail")
   this.router.navigate(['login']);
 }
 usersaveForm(){

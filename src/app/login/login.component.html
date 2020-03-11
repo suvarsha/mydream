@@ -9,8 +9,8 @@
       <div [hidden]="submitted" style="width: 400px;">  
         <form #saveUser1 (ngSubmit)="saveUser(saveUser1)"  [formGroup]="loginSaveForm">  
           <div class="form-group">  
-            <h3>Login</h3>  
-            <label for="name">username</label>  
+            <h3>LOGIN</h3>  
+            <label for="name">USERNAME</label>  
             <input type="text" class="form-control"  formControlName="userName" data-toggle="tooltip"   
                data-placement="right" title="Enter  Id" >  
             <div class="alert alert-danger" *ngIf = "(loginSaveForm.get('userName').touched) && (loginSaveForm.get('userName').invalid)"   
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">  
         
-          <label for="name">password</label>  
+          <label for="name">PASSWORD</label>  
           <input type="text" class="form-control"  formControlName="password" data-toggle="tooltip"   
              data-placement="right" title="Enter  Id" >  
           <div class="alert alert-danger" *ngIf = "(loginSaveForm.get('password').touched) && (loginSaveForm.get('password').invalid)"   

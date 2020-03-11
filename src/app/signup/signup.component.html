@@ -15,14 +15,14 @@
              data-placement="right" title="Enter User Id" >  
           <div class="alert alert-danger" *ngIf = "(usersaveform.get('id').touched) && (usersaveform.get('id').invalid)"   
             style="margin-top: 5px;">  
-              <span *ngIf="usersaveform.get('id').errors.required"> User Name is Required</span>  
+              <span *ngIf="usersaveform.get('id').errors.required"> User id is Required</span>  
                 <span *ngIf = "usersaveform.get('id').errors.minlength">   
                     MinLength Error   
                 </span>                     
             </div>  
       </div>  
           <div class="form-group">  
-              <label for="name">User Name</label>  
+              <label for="name">USER NAME</label>  
               <input type="text" class="form-control"  formControlName="userName" data-toggle="tooltip"   
                  data-placement="right" title="Enter User Name" >  
               <div class="alert alert-danger" *ngIf = "(usersaveform.get('userName').touched) && (usersaveform.get('userName').invalid)"   
@@ -35,7 +35,7 @@
           </div>  
     
            <div class="form-group">  
-              <label for="name"> Email</label>  
+              <label for="name"> EMAIL</label>  
               <input type="text" class="form-control" formControlName="email"   
                 data-toggle="tooltip" data-placement="right" title="Enter Email">  
                 <div class="alert alert-danger" *ngIf = "(usersaveform.get('email').touched) && (usersaveform.get('email').invalid)"   
@@ -48,7 +48,7 @@
           </div>  
     
           <div class="form-group">  
-            <label for="name"> Password</label>  
+            <label for="name"> PASSWORD</label>  
             <input type="text" class="form-control" formControlName="password"  
               data-toggle="tooltip" data-placement="right" title="Enter Password">  
               <div class="alert alert-danger" *ngIf = "(usersaveform.get('password').touched) && (usersaveform.get('password').invalid)"   
@@ -63,7 +63,7 @@
               </div>  
         </div>  
         <div class="form-group">  
-          <label for="name"> MobileNumber</label>  
+          <label for="name"> MOBILENUMBER</label>  
           <input type="number" class="form-control" formControlName="mobileNumber" data-toggle="tooltip"  pattern="^\d{10}$"
         data-placement="right" title="Enter mobileNumber">  
             <div class="alert alert-danger" *ngIf = "(usersaveform.get('mobileNumber').touched) && (usersaveform.get('mobileNumber').invalid)"   
@@ -78,11 +78,19 @@
             </div>  
       </div>
       <div class="form-group">  
-     <label for="profileImage">Upload Image</label>  
-            <input formControlName="profileImage" class="form-control" type="file"(change)="selectFile($event)">   
-        </div>  
+     <label for="profileImage">UPLOAD IMAGE</label>  
+            <input formControlName="profileImage" class="form-control" type="file"(change)="selectFile($event)">  
+            <div class="alert alert-danger" *ngIf = "(usersaveform.get('profileImage').touched) && (usersaveform.get('profileImage').invalid)"   
+            style="margin-top: 5px;">  
+            <span *ngIf="usersaveform.get('profileImage').errors.required"> file is Required</span>  
+  
+        
+          </div>  
+        </div>
     
-       <button type="submit"    class="btn btn-success" >Submit</button>  
+       <button type="submit"    class="btn btn-success" >SUBMIT</button>  
+       <label>NewUser?</label>
+      <a routerLink="/signup"> <label>SignUp</label></a>
         
       </form> 
       <br> 
