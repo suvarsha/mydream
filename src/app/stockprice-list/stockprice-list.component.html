@@ -9,6 +9,8 @@
                 <th>STOCKEXCHANGE</th>  
                 <th>CURRENTPRICE</th>  
                 <th>DATE</th> 
+                <th>TIME</th>
+                <th>UPLOADFILE</th>
                 <th>DELETE</th> 
                 <th>UPDATE</th>
                 
@@ -21,6 +23,8 @@
                 <td>{{stock.stockExchange}}</td>  
                 <td>{{stock.currentPrice}}</td>  
                 <td>{{stock.date}}</td>
+                <td>{{stock.time}}</td>
+                <td>{{stock.uploadFile}}</td>
                 <td><button (click)="deleteStock(stock)"   class="btn btn-danger">Delete</button> </td>
                 <td><button (click)="updateStock(stock)"   class="btn btn-success">Update</button> </td>
             </tr>

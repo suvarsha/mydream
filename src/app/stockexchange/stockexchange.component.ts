@@ -30,10 +30,10 @@ export class StockexchangeComponent implements OnInit {
   }
   exchangeSaveForm=new FormGroup({
 id:new FormControl('',[Validators.required,Validators.minLength(5)]),
-stockExchange:new FormControl('',[Validators.required,Validators.minLength(5)]),
-brief:new FormControl('',[Validators.required,Validators.minLength(5)]),
-contactAddress:new FormControl('',[Validators.required,Validators.minLength(5)]),
-remarks:new FormControl('',[Validators.required,Validators.minLength(5)]),
+stockExchange:new FormControl('',[Validators.required]),
+brief:new FormControl('',[Validators.required]),
+contactAddress:new FormControl('',[Validators.required]),
+remarks:new FormControl('',[Validators.required]),
     
   });
   saveExchange(saveExchange){

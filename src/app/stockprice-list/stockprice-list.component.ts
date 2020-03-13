@@ -30,6 +30,7 @@ updateStock(price:Stockprice){
   window.localStorage.removeItem("edit-stockexchange");
   window.localStorage.setItem("edit-stockexchange", price.stockExchange.toString());
 
+
   this.router.navigate(['stockprice']);
   
 }

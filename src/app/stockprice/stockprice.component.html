@@ -48,16 +48,33 @@
         </div>
             <div class="form-group">  
             <label for="name">DATE</label>  
-            <input type="date" class="form-control"  formControlName="date" data-toggle="tooltip"   
+            <input type="text" class="form-control"  formControlName="date" data-toggle="tooltip"   
                data-placement="right" title="Enter current price" >  
             <div class="alert alert-danger" *ngIf = "(stockPriceform.get('date').touched) && (stockPriceform.get('date').invalid)"   
               style="margin-top: 5px;">  
                 <span *ngIf="stockPriceform.get('date').errors.required"> date is Required</span>  
-                  <span *ngIf = "stockPriceform.get('date').errors.minlength">   
-                      MinLength Error   
-                  </span>                     
+                                       
               </div>  
         </div>
+        <div class="form-group">  
+          <label for="name">TIME</label>  
+          <input type="text" class="form-control"  formControlName="time" data-toggle="tooltip"   
+             data-placement="right" title="Enter current price" >  
+          <div class="alert alert-danger" *ngIf = "(stockPriceform.get('time').touched) && (stockPriceform.get('time').invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="stockPriceform.get('time').errors.required"> time is Required</span>  
+                                    
+            </div>  
+      </div>
+      <div class="form-group">  
+        <label for="uploadFile">UPLOAD IMAGE</label>  
+               <input formControlName="uploadFile" class="form-control" type="file"(change)="selectFile($event)">  
+               <div class="alert alert-danger" *ngIf = "(stockPriceform.get('uploadFile').touched) && (stockPriceform.get('uploadFile').invalid)"   
+               style="margin-top: 5px;">  
+               <span *ngIf="stockPriceform.get('uploadFile').errors.required"> file is Required</span>  
+     
+             </div>  
+           </div>
         
         <button type="submit"    class="btn btn-success">Submit</button>
         </form>
