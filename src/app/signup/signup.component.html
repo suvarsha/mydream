@@ -36,12 +36,12 @@
     
            <div class="form-group">  
               <label for="name"> EMAIL</label>  
-              <input type="text" class="form-control" formControlName="email"   
+              <input type="text" class="form-control" formControlName="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+"  
                 data-toggle="tooltip" data-placement="right" title="Enter Email">  
                 <div class="alert alert-danger" *ngIf = "(usersaveform.get('email').touched) && (usersaveform.get('email').invalid)"   
                 style="margin-top: 5px;">  
                   <span *ngIf="usersaveform.get('email').errors.required"> Email is Required</span>  
-                    <span *ngIf = "usersaveform.get('email').errors.email">   
+                    <span *ngIf = "usersaveform.get('email').errors.pattern">   
                         Invalid Email Format   
                     </span>                     
                 </div>  
